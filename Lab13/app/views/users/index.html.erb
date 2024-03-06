@@ -1,0 +1,16 @@
+<<!-- app/views/users/index.html.erb -->
+<h1>Users</h1>
+
+<% if @error %>
+  <p><%= @error %></p>
+<% else %>
+  <ul>
+    <% @users.each do |user| %>
+      <li>
+        <strong>Username:</strong> <%= user["username"] %><br>
+        <strong>Name:</strong> <%= user["name"] %><br>
+        <strong>Bio:</strong> <%= user["bio"] %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
